@@ -98,7 +98,7 @@ export default function Footer() {
       {/* Bottom Blue Bar */}
       <div className="bg-blue-900/60 py-4">
         <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-white text-sm gap-4">
-          <span>© 2025 Chigomezyo Private Primary School</span>
+          <span>© 2026 Chigomezyo Private Primary School</span>
 
           {/* Back to Top */}
           <button

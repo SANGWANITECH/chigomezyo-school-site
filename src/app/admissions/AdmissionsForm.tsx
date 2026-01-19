@@ -102,7 +102,7 @@ Disabilities (if any):
 
           {/* Age */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-stretch-50% text-blue-900/80">Student Age</h3>
+            <h3 className="text-2xl font-stretch-50% text-blue-900/80">date of birth</h3>
             <div className="grid grid-cols-3 gap-4">
               <select
                 name="day"

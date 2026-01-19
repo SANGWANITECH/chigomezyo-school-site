@@ -26,7 +26,7 @@ export default function Header() {
           {/* Logo + School Name with | divider */}
           <div className="flex items-center gap-6">
             <Link href="/" className="flex items-center gap-3">
-              <div className="relative w-30 h-30">
+              <div className="relative -ml-2 w-30 h-30">
                 <Image
                   src="/logo.png"
                   alt="Chigomezezo PVT Primary School Logo"
