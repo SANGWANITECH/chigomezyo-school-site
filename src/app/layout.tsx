@@ -13,7 +13,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: "Chigomezezo Private Primary School | Karonga, Malawi",
+    default: "Chigomezyo Private Primary School | Karonga, Malawi",
     template: "%s | Chigomezyo Private Primary School",
   },
   description:
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  // Open Graph (Facebook, WhatsApp, LinkedIn sharing) - using logo.png
+  // Open Graph (Facebook, WhatsApp, LinkedIn sharing) - using og-image.jpg
   openGraph: {
     title: "Chigomezyo Private Primary School | Karonga, Malawi",
     description:
@@ -41,22 +41,22 @@ export const metadata: Metadata = {
     siteName: "Chigomezyo PVT Primary School",
     images: [
       {
-        url: "/logo.png", // Using your existing logo.png
-        width: 1200,      // Recommended social size (resize if needed)
+        url: "/og-image.jpg", // Changed to your new og-image.jpg
+        width: 1200,
         height: 630,
-        alt: "Chigomezyo Private Primary School Logo",
+        alt: "Chigomezyo Private Primary School – Quality Education Starts Here",
       },
     ],
     locale: "en_US",
     type: "website",
   },
-  // Twitter/X cards - same logo.png
+  // Twitter/X cards - using og-image.jpg
   twitter: {
     card: "summary_large_image",
     title: "Chigomezyo Private Primary School",
     description:
       "Good Foundation For Your Child Starts Here. Register today!",
-    images: ["/logo.png"],
+    images: ["/og-image.jpg"],
     creator: "@chigomezyo_school", // Optional: your Twitter/X handle
   },
   // Theme color for mobile status bar (your blue-900)
@@ -90,6 +90,9 @@ export default function RootLayout({
 
         {/* iOS Safari status bar */}
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+        {/* Google Site Verification Meta Tag */}
+        <meta name="google-site-verification" content="JDYpMoLO5yg2S4SczEj6aSweHXIdpghLzjaHbWSrWTs" />
       </head>
 
       <body className={`${poppins.variable} font-poppins antialiased bg-white text-gray-900`}>
