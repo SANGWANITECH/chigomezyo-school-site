@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chigomezyo-school-site.netlify.app/sitemap.xml
