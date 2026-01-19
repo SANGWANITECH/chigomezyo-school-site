@@ -32,16 +32,15 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  // Open Graph (Facebook, WhatsApp, LinkedIn sharing) - using og-image.jpg
   openGraph: {
     title: "Chigomezyo Private Primary School | Karonga, Malawi",
     description:
       "Good Foundation For Your Child Starts Here. Register today at Chigomezyo Private Primary School.",
-    url: "https://chigomezyo-school-site.netlify.app", // Update to custom domain later
+    url: "https://chigomezyo-school-site.netlify.app",
     siteName: "Chigomezyo PVT Primary School",
     images: [
       {
-        url: "/og-image.jpg", // Changed to your new og-image.jpg
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Chigomezyo Private Primary School – Quality Education Starts Here",
@@ -50,21 +49,18 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
-  // Twitter/X cards - using og-image.jpg
   twitter: {
     card: "summary_large_image",
     title: "Chigomezyo Private Primary School",
     description:
       "Good Foundation For Your Child Starts Here. Register today!",
     images: ["/og-image.jpg"],
-    creator: "@chigomezyo_school", // Optional: your Twitter/X handle
+    creator: "@chigomezyo_school",
   },
-  // Theme color for mobile status bar (your blue-900)
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#1e3a8a" },
     { media: "(prefers-color-scheme: dark)", color: "#1e3a8a" },
   ],
-  // Viewport for mobile
   viewport: "width=device-width, initial-scale=1",
 };
 
@@ -76,22 +72,11 @@ export default function RootLayout({
   return (
     <html lang="en" dir="ltr">
       <head>
-        {/* Favicon - using your logo.png directly */}
         <link rel="icon" href="/logo.png" type="image/png" />
-
-        {/* Apple touch icon - using logo.png for iOS home screen */}
         <link rel="apple-touch-icon" href="/logo.png" sizes="180x180" />
-
-        {/* Theme color meta (blue-900) */}
         <meta name="theme-color" content="#1e3a8a" />
-
-        {/* Extra support for older Android/Windows */}
         <meta name="msapplication-navbutton-color" content="#1e3a8a" />
-
-        {/* iOS Safari status bar */}
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-
-        {/* Google Site Verification Meta Tag */}
         <meta name="google-site-verification" content="JDYpMoLO5yg2S4SczEj6aSweHXIdpghLzjaHbWSrWTs" />
       </head>
 
@@ -100,6 +85,13 @@ export default function RootLayout({
         <main>{children}</main>
         <ContactUs />
         <Footer />
+
+        {/* Chatbase AI Chatbot Embed - Loads on every page */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="EquVWYS8Najw0XA1Qmz15";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();`,
+          }}
+        />
       </body>
     </html>
   );
